@@ -1,0 +1,10 @@
+Iniciar o serviço da docker.
+Rodar o seguinte comando.
+sudo docker-compose up app
+se obtiver sucesso. abriro navegador e acessar o localhost.
+
+servidor: db
+user: root
+senha: password
+
+pode criar as tabelas.
