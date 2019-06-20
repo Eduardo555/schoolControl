@@ -2,6 +2,7 @@ package model;
 
 import java.sql.Date;
 
+
 public class Aluno {
 
 	public Integer getCodAluno() {
