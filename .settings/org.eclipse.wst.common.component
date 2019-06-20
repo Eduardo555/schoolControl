@@ -2,6 +2,7 @@
     <wb-module deploy-name="SchoolControl">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Config"/>
         <property name="context-root" value="SchoolControl"/>
         <property name="java-output-path" value="/SchoolControl/build/classes"/>
     </wb-module>
