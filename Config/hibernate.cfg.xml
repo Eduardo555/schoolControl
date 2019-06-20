@@ -14,7 +14,8 @@
         <property name="hbm2ddl.auto">update</property>
          
         
-        <mapping class="br.com.meuprojeto.bean.Livro" />
+        <!-- <mapping class="br.com.meuprojeto.bean.Livro" /> -->
+        <mapping class="br.com.SchoolControl.model.Usuario" />
          
     </session-factory>
 </hibernate-configuration>

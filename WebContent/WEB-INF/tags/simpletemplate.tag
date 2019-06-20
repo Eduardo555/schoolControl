@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="../../resource/assets/css/cs-skin-elastic.css">
     <link rel="stylesheet" href="../../resource/assets/css/style.css">
     
+    <link rel="stylesheet" href="../../resource/assets/css/lib/datatable/dataTables.bootstrap.min.css">
+    
     <link href="https://cdn.jsdelivr.net/npm/chartist@0.11.0/dist/chartist.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/jqvmap@1.5.1/dist/jqvmap.min.css" rel="stylesheet">
 
@@ -34,13 +36,13 @@
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="View/Basicos/Inicio.jsp"><i class="menu-icon fa fa-laptop"></i>Inicio </a>
+                        <a href="../Basicos/Inicio.jsp"><i class="menu-icon fa fa-laptop"></i>Inicio </a>
                     </li>
                     <li class="menu-title">Controle Administrativo</li><!-- /.menu-title -->
                     <li class="menu-item-has-children dropdown">
                         <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cogs"></i>Turmas</a>
-                        <ul class="sub-menu children dropdown-menu">                            <li><i class="fa fa-puzzle-piece"></i><a href="View/Turmas/ListagemTurmas.jsp">Listagem</a></li>
-                            <li><i class="fa fa-id-badge"></i><a href="View/Turmas/CadastroTurmas.jsp">Cadastro</a></li>
+                        <ul class="sub-menu children dropdown-menu">                            <li><i class="fa fa-puzzle-piece"></i><a href="../Turmas/ListagemTurmas.jsp">Listagem</a></li>
+                            <li><i class="fa fa-id-badge"></i><a href="../Turmas/CadastroTurmas.jsp">Cadastro</a></li>
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
@@ -169,6 +171,7 @@
             </div>
         </header>
         
+        <div>
         
         
 		<!--  INVOCA PAGINAS  -->
@@ -215,6 +218,21 @@
     <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/moment.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.js"></script>
     <script src="../../resource/assets/js/init/fullcalendar-init.js"></script>
+	
+
+
+
+
+    <script src="../../resource/assets/js/lib/data-table/datatables.min.js"></script>
+    <script src="../../resource/assets/js/lib/data-table/dataTables.bootstrap.min.js"></script>
+    <script src="../../resource/assets/js/lib/data-table/dataTables.buttons.min.js"></script>
+    <script src="../../resource/assets/js/lib/data-table/buttons.bootstrap.min.js"></script>
+    <script src="../../resource/assets/js/lib/data-table/jszip.min.js"></script>
+    <script src="../../resource/assets/js/lib/data-table/vfs_fonts.js"></script>
+    <script src="../../resource/assets/js/lib/data-table/buttons.html5.min.js"></script>
+    <script src="../../resource/assets/js/lib/data-table/buttons.print.min.js"></script>
+    <script src="../../resource/assets/js/lib/data-table/buttons.colVis.min.js"></script>
+    <script src="../../resource/assets/js/init/datatables-init.js"></script>
 	
 </body>
 </html>
