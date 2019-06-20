@@ -48,6 +48,7 @@
                                 <i class="fa fa-ban"></i> EXCLUIR
                             </button>
                             
+                            
                         </div>
                     </div>
                 </div>
