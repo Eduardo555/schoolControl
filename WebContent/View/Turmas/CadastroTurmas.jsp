@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="mt" tagdir="/WEB-INF/tags" %>
-<mt:simpletemplate title="About Us">
+<mt:simpletemplate title="Cadastro Turmas">
 	<jsp:attribute name="content">
 		
 		
