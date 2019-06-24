@@ -52,7 +52,20 @@
                             <li><i class="fa fa-table"></i><a href="tables-data.html">Cadastro</a></li>
                         </ul>
                     </li>
-                   
+                   <li class="menu-item-has-children dropdown">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cogs"></i>Professores</a>
+                        <ul class="sub-menu children dropdown-menu">                            
+                        	<li><i class="fa fa-puzzle-piece"></i><a href="../Turmas/ListagemTurmas.jsp">Listagem</a></li>
+                            <li><i class="fa fa-id-badge"></i><a href="../Turmas/CadastroTurmas.jsp">Cadastro</a></li>
+                        </ul>
+                    </li>
+					<li class="menu-item-has-children dropdown">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cogs"></i>Matérias</a>
+                        <ul class="sub-menu children dropdown-menu">                            
+                        	<li><i class="fa fa-puzzle-piece"></i><a href="../Turmas/ListagemTurmas.jsp">Listagem</a></li>
+                            <li><i class="fa fa-id-badge"></i><a href="../Turmas/CadastroTurmas.jsp">Cadastro</a></li>
+                        </ul>
+                    </li>
 
                     <li class="menu-title">Controle Diário</li><!-- /.menu-title -->
 
