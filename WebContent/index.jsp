@@ -35,7 +35,7 @@
                     </a>
                 </div>
                 <div class="login-form">
-                    <form>
+                    <form >
                         <div class="form-group">
                             <label>Email address</label>
                             <input type="email" class="form-control" placeholder="Email">
@@ -61,7 +61,7 @@
                             </div>
                         </div>
                         <div class="register-link m-t-15 text-center">
-                            <p>Don't have account ? <a href="#"> Sign Up Here</a></p>
+                            <p>Don't have account ? <a href="http://localhost:8080/SchoolControl/WEB-INF/classes/Banco/Conexao.java"> Sign Up Here</a></p>
                         </div>
                     </form>
                 </div>
