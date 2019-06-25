@@ -48,8 +48,8 @@
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Alunos</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-table"></i><a href="tables-basic.html">Listagem</a></li>
-                            <li><i class="fa fa-table"></i><a href="tables-data.html">Cadastro</a></li>
+                            <li><i class="fa fa-puzzle-piece"></i><a href="../Alunos/ListagemAlunos.jsp">Listagem</a></li>
+                            <li><i class="fa fa-id-badge"></i><a href="../Alunos/CadastroAlunos.jsp">Cadastro</a></li>
                         </ul>
                     </li>
                    <li class="menu-item-has-children dropdown">
