@@ -123,6 +123,11 @@ public final class DrawboardEndpoint extends Endpoint {
                         if (player != null) {
                             // Remove this player from the room.
                             player.removeFromRoom();
+
+                            // Set player to null to prevent NPEs when onMessage events
+                            // are processed (from other threads) after onClose has been
+                            // called from different thread which closed the Websocket session.
+                            player = null;
                         }
                     } catch (RuntimeException ex) {
                         log.error("Unexpected exception: " + ex.toString(), ex);
@@ -203,17 +208,17 @@ public final class DrawboardEndpoint extends Endpoint {
 
                                 break;
                             }
-
-                        } catch (RuntimeException ex) {
+                        } catch (ParseException e) {
+                            // Client sent invalid data
+                            // Ignore, TODO: maybe close connection
+                        } catch (RuntimeException e) {
                             // Client sent invalid data.
                             // Ignore, TODO: maybe close connection
                             if (dontSwallowException) {
-                                throw ex;
+                                throw e;
                             }
-                        } catch (ParseException ex) {
-                            // Client sent invalid data.
-                            // Ignore, TODO: maybe close connection
                         }
+
                     } catch (RuntimeException ex) {
                         log.error("Unexpected exception: " + ex.toString(), ex);
                     }

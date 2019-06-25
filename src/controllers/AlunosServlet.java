@@ -1,8 +1,9 @@
 package controllers;
 
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
 
-@WebServlet(name = "")
-public class AlunosServlet {
+@WebServlet(name = "Alunos")
+public class AlunosServlet extends HttpServlet {
 
 }

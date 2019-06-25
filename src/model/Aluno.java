@@ -1,6 +1,6 @@
 package model;
 
-import java.sql.Date;
+import java.util.Date;
 
 
 public class Aluno {
@@ -17,15 +17,15 @@ public class Aluno {
 	public void setNome(String nome) {
 		Nome = nome;
 	}
-	public Date getDataNascimento() {
+	public String getDataNascimento() {
 		return DataNascimento;
 	}
-	public void setDataNascimento(Date dataNascimento) {
+	public void setDataNascimento(String dataNascimento) {
 		DataNascimento = dataNascimento;
 	}
 	private Integer CodAluno;
 	private String Nome;
-	private Date DataNascimento;
+	private String DataNascimento;
 	
 	
 }

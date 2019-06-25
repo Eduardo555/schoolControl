@@ -3,10 +3,15 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+import com.mysql.jdbc.PreparedStatement;
+import com.mysql.jdbc.Statement;
+
+import model.Aluno;
+
 public class Conexao {
 
 	private String host = "192.168.99.100";
-	private String banco = "School";
+	private String banco = "SchoolControl";
 	private String usuario = "root";
 	private String senha = "password";
 	private String url = "jdbc:mysql://"+host+"/"+banco;
@@ -39,6 +44,19 @@ public class Conexao {
 			System.out.println("Erro:"+ex.getMessage());
 		}
 		return false;
+	}
+	
+	public void inserir(Aluno aluno) throws SQLException {
+		String sql = "insert into Alunos (nome_aluno,data_nascimento) values('"+aluno.getNome().toString()+"','"+aluno.getDataNascimento().toString()+"')";
+		try {
+		java.sql.PreparedStatement statement = connection.prepareStatement(sql);
+		//Statement statement = (Statement) connection.createStatement();
+		statement.execute(sql);
+		System.out.println("certo");
+		}catch(Exception ex) {
+			System.out.println("Deu ruim: "+ex);
+		}
+		
 	}
 	
 	
