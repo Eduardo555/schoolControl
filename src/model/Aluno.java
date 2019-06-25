@@ -59,25 +59,15 @@ public class Aluno {
 	
 	private Integer CodAluno;
 	private String Nome;
-<<<<<<< HEAD
-
 	private String DataNascimento;
-	
-
-
-=======
-	private String DataNascimento;
->>>>>>> 18082909eac213d0d295d6da3254bc736c04bdae
 	private String Sexo;
 	private String Cor;
 	private String DataMatricula;
 	private String Status;
 	private String Desligamento;
-<<<<<<< HEAD
-	private Date DataDesligamento;
-=======
 	private String DataDesligamento;
->>>>>>> 18082909eac213d0d295d6da3254bc736c04bdae
+
+
 
 	
 }

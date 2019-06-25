@@ -21,12 +21,13 @@ public class AlunoBd {
 	}
 	
 	public void inserirAlunos(Aluno aluno) throws SQLException {
-		
+		//adicionados o insert aluno
 		Conexao conn = new Conexao();
 		
 		connection = conn.getConexao();
 		
-		String sql = "insert into Alunos (nome_aluno,data_nascimento) values('"+aluno.getNome().toString()+"','"+aluno.getDataNascimento().toString()+"')";
+		String sql = "insert into Alunos (nome_aluno,data_nascimento,sexo,cor,data_matricula) values('"+aluno.getNome().toString()+
+					 "','"+aluno.getDataNascimento().toString()+"',"+aluno.getSexo()+","+aluno.getCor()+","+aluno.getDataMatricula()+")";
 		try {
 		java.sql.PreparedStatement statement = connection.prepareStatement(sql);
 		statement.execute(sql);
@@ -40,9 +41,15 @@ public class AlunoBd {
 	private ArrayList<Aluno> buscaAlunos() throws SQLException{
 		String sql = "select * from Alunos";		
 		ArrayList<Aluno> lista_alunos = new ArrayList<Aluno>();
+		Aluno aluno = new Aluno();
 		
 		Statement statement = (Statement) connection.createStatement();
 		ResultSet rs = statement.executeQuery(sql);
+		while(rs.next()) {
+			aluno.setNome(rs.getString("nome_aluno"));
+			aluno.setDataNascimento(rs.getString("data_nascimento"));
+			lista_alunos.add(aluno);
+		}
 		
 		return lista_alunos;
 	}

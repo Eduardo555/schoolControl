@@ -4,14 +4,16 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import BdClasses.AlunoBd;
 import model.Aluno;
 
-@WebServlet(name="Teste", urlPatterns = "/SalvarAlunos")
+@WebServlet(urlPatterns = "/SalvarAlunos")
 public class AlunosServlet extends HttpServlet{
 	
 	Aluno aluno = new Aluno();
@@ -23,8 +25,13 @@ public class AlunosServlet extends HttpServlet{
 		MontarAluno(req);
 		
 		// Salva novo.
-		if(Integer.parseInt(req.getParameter("TxtNome")) == 0) {
-			SalvarNovoAluno();
+		if(req.getParameter("TxtCodigo") == "") {
+			try {
+				SalvarNovoAluno();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		else {
 			AtualizarAluno();
@@ -45,8 +52,11 @@ public class AlunosServlet extends HttpServlet{
 				aluno.setDataDesligamento(req.getParameter("TxtDataDesligamento"));
 	}
 	
-	private void SalvarNovoAluno() {
+	private void SalvarNovoAluno() throws SQLException {
 		// Realizar Insert.
+		AlunoBd bd = new AlunoBd();
+		bd.inserirAlunos(aluno);
+		
 	}
 	
 	private void AtualizarAluno() {
