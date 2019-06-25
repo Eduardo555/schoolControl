@@ -23,7 +23,7 @@ public class AlunosServlet extends HttpServlet{
 		MontarAluno(req);
 		
 		// Salva novo.
-		if(Integer.parseInt(req.getParameter("TxtNome")) == 0) {
+		if(Integer.parseInt(req.getParameter("TxtCodigo")) == 0) {
 			SalvarNovoAluno();
 		}
 		else {
