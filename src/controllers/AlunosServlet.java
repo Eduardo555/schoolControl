@@ -25,6 +25,7 @@ public class AlunosServlet extends HttpServlet{
 		MontarAluno(req);
 		
 		// Salva novo.
+
 		if(req.getParameter("TxtCodigo") == "") {
 			try {
 				SalvarNovoAluno();
@@ -32,6 +33,7 @@ public class AlunosServlet extends HttpServlet{
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+
 		}
 		else {
 			AtualizarAluno();
