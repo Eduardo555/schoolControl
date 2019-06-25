@@ -28,7 +28,7 @@
             </div>
         </div>
         
-		<form action="SalvarAlunos" method="post">
+		<form action="../../SalvarAlunos" method="post">
 		<div class="content">
 			<div class="row">
 				<div class="col-sm-12">
@@ -39,15 +39,24 @@
                         		<div class="row">
                         			<div class="col-sm-6">
 	                        			<div class="form-group">
+			                                <label for="company" class=" form-control-label">Código</label>
+			                                <input type="text" name="TxtCodigo" id="TxtCodigo" placeholder="0" class="form-control" value="${Aluno.CodAluno}">	
+	                                	</div>
+                        			</div>
+                        		</div>
+                        		
+                        		<div class="row">
+                        			<div class="col-sm-6">
+	                        			<div class="form-group">
 			                                <label for="company" class=" form-control-label">Nome</label>
-			                                <input type="text" id="TxtNome" placeholder="Nome do aluno" class="form-control">	
+			                                <input type="text" name="TxtNome" id="TxtNome" placeholder="Nome do aluno" class="form-control" value="${Aluno.Nome}">	
 	                                	</div>
                         			</div>
                         		
 	                        		<div class="col-sm-3">
 	                        			<div class="form-group">
 			                                <label for="vat" class=" form-control-label">Data de nascimento</label>
-			                                <input type="text" id="TxtDataNascimento" placeholder="99/99/1999" class="form-control">
+			                                <input type="text" name="TxtDataNascimento" id="TxtDataNascimento" placeholder="99/99/1999" class="form-control">
 	                                	</div>
 	                        		</div>
 	                        		
@@ -68,7 +77,7 @@
                         			<div class="col-sm-3">
                         				<div class="form-group">
 			                                <label for="street" class=" form-control-label">Cor</label>
-			                                <select name="TxtSexo" class="form-control" id="TxtCor">
+			                                <select name="TxtCor" class="form-control" id="TxtCor">
 											  <option value="">Nenhum</option> 
 											  <option value="B">Branca</option>
 											  <option value="N">Negro</option>
@@ -81,14 +90,14 @@
                         			<div class="col-sm-3">
                         				<div class="form-group">
 			                                <label for="street" class=" form-control-label">Data matrícula</label>
-			                                <input type="TxtDataMatricula" id="street" placeholder="99/99/1999" class="form-control">
+			                                <input type="text" name="TxtDataMatricula" id="TxtDataMatricula" placeholder="99/99/1999" class="form-control">
 		                                </div>
                         			</div>
                         			
                         			<div class="col-sm-3">
                         				<div class="form-group">
 			                                <label for="street" class=" form-control-label">Status</label>
-			                                <select name="TxtSexo" class="form-control" id="TxtStatus">
+			                                <select name="TxtStatus" class="form-control" id="TxtStatus">
 											  <option value="A">Ativo</option>
 											  <option value="I">Inativo</option>
 											</select>
@@ -101,7 +110,7 @@
                                 	<div class="col-sm-12">
                                 		<div class="form-group">
 			                                <label for="street" class=" form-control-label">Motivo Desligamento</label>
-			                                <textarea id="TxtMotivoDesligamento" class="form-control" rows="5" cols="5"></textarea>
+			                                <textarea name="TxtMotivoDesligamento" id="TxtMotivoDesligamento" class="form-control" rows="5" cols="5"></textarea>
 		                                </div>
                                 	</div>
                                 </div>
@@ -110,7 +119,7 @@
                                 	<div class="col-sm-3">
                                 		<div class="form-group">
 			                                <label for="street" class=" form-control-label">Data de desligamento</label>
-	                                		<input type="text" id="TxtDataDesligamento" placeholder="20/06/2019" class="form-control">
+	                                		<input type="text" name="TxtDataDesligamento" id="TxtDataDesligamento" placeholder="20/06/2019" class="form-control">
 		                                </div>
                                 	</div>
                                 </div>
@@ -118,12 +127,8 @@
                             </div>
                         
                         <div class="card-footer">
-                            <button type="submit" class="btn btn-success btn-sm">
-                                <i class="fa fa-dot-circle-o"></i> SALVAR
-                            </button>
-                            <button type="reset" class="btn btn-danger btn-sm">
-                                <i class="fa fa-ban"></i> EXCLUIR
-                            </button>
+                            <input type="submit" class="btn btn-success btn-sm" value="SALVAR" />
+                            <input type="submit" class="btn btn-danger btn-sm" value="EXCLUIR" />
                         </div>
                     </div>
 					

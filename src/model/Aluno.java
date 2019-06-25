@@ -1,8 +1,5 @@
 package model;
 
-import java.util.Date;
-
-
 public class Aluno {
 
 	public Integer getCodAluno() {
@@ -29,16 +26,16 @@ public class Aluno {
 	public void setCor(String cor) {
 		Cor = cor;
 	}
-	public Date getDataDesligamento() {
+	public String getDataDesligamento() {
 		return DataDesligamento;
 	}
-	public void setDataDesligamento(Date dataDesligamento) {
+	public void setDataDesligamento(String dataDesligamento) {
 		DataDesligamento = dataDesligamento;
 	}
-	public Date getDataMatricula() {
+	public String getDataMatricula() {
 		return DataMatricula;
 	}
-	public void setDataMatricula(Date dataMatricula) {
+	public void setDataMatricula(String dataMatricula) {
 		DataMatricula = dataMatricula;
 	}
 	public String getDesligamento() {
@@ -62,17 +59,25 @@ public class Aluno {
 	
 	private Integer CodAluno;
 	private String Nome;
+<<<<<<< HEAD
 
 	private String DataNascimento;
 	
 
 
+=======
+	private String DataNascimento;
+>>>>>>> 18082909eac213d0d295d6da3254bc736c04bdae
 	private String Sexo;
 	private String Cor;
-	private Date DataMatricula;
+	private String DataMatricula;
 	private String Status;
 	private String Desligamento;
+<<<<<<< HEAD
 	private Date DataDesligamento;
+=======
+	private String DataDesligamento;
+>>>>>>> 18082909eac213d0d295d6da3254bc736c04bdae
 
 	
 }
