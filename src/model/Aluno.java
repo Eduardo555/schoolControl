@@ -60,7 +60,6 @@ public class Aluno {
 	private Integer CodAluno;
 	private String Nome;
 	private String DataNascimento;
-	private String DataNascimento;
 	private String Sexo;
 	private String Cor;
 	private String DataMatricula;
