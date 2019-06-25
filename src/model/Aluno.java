@@ -17,10 +17,10 @@ public class Aluno {
 	public void setNome(String nome) {
 		Nome = nome;
 	}
-	public Date getDataNascimento() {
+	public String getDataNascimento() {
 		return DataNascimento;
 	}
-	public void setDataNascimento(Date dataNascimento) {
+	public void setDataNascimento(String dataNascimento) {
 		DataNascimento = dataNascimento;
 	}
 	public String getCor() {
@@ -29,16 +29,16 @@ public class Aluno {
 	public void setCor(String cor) {
 		Cor = cor;
 	}
-	public Date getDataDesligamento() {
+	public String getDataDesligamento() {
 		return DataDesligamento;
 	}
-	public void setDataDesligamento(Date dataDesligamento) {
+	public void setDataDesligamento(String dataDesligamento) {
 		DataDesligamento = dataDesligamento;
 	}
-	public Date getDataMatricula() {
+	public String getDataMatricula() {
 		return DataMatricula;
 	}
-	public void setDataMatricula(Date dataMatricula) {
+	public void setDataMatricula(String dataMatricula) {
 		DataMatricula = dataMatricula;
 	}
 	public String getDesligamento() {
@@ -62,12 +62,12 @@ public class Aluno {
 	
 	private Integer CodAluno;
 	private String Nome;
-	private Date DataNascimento;
+	private String DataNascimento;
 	private String Sexo;
 	private String Cor;
-	private Date DataMatricula;
+	private String DataMatricula;
 	private String Status;
 	private String Desligamento;
-	private Date DataDesligamento;
+	private String DataDesligamento;
 	
 }
