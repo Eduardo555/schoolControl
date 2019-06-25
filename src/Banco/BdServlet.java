@@ -34,7 +34,7 @@ public class BdServlet extends HttpServlet {
 
 		Conexao conn = new Conexao();
 		conn.getConexao();
-		Aluno aluno = new Aluno();
+		/*Aluno aluno = new Aluno();
 		aluno.setNome("Julio");
 		aluno.setDataNascimento("2000-05-13");
 
@@ -44,7 +44,7 @@ public class BdServlet extends HttpServlet {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 		doGet(request, response);
 	}
 

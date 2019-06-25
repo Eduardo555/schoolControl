@@ -62,17 +62,17 @@ public class Aluno {
 	
 	private Integer CodAluno;
 	private String Nome;
-<<<<<<< HEAD
+
 	private String DataNascimento;
 	
-=======
-	private Date DataNascimento;
+
+
 	private String Sexo;
 	private String Cor;
 	private Date DataMatricula;
 	private String Status;
 	private String Desligamento;
 	private Date DataDesligamento;
->>>>>>> 4017c4c810325d67bead47b73e8d856abd9a3cb8
+
 	
 }
