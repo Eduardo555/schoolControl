@@ -44,7 +44,7 @@ public class Client {
      * send operation has finished.
      */
     private final LinkedList<AbstractWebsocketMessage> messagesToSend =
-            new LinkedList<AbstractWebsocketMessage>();
+            new LinkedList<>();
     /**
      * If this client is currently sending a messages asynchronously.
      */
@@ -105,6 +105,17 @@ public class Client {
                                 CloseCodes.VIOLATED_POLICY,
                                 "Send Buffer exceeded");
                         try {
+                            // TODO: close() may block if the remote endpoint doesn't read the data
+                            // (eventually there will be a TimeoutException). However, this method
+                            // (sendMessage) is intended to run asynchronous code and shouldn't
+                            // block. Otherwise it would temporarily stop processing of messages
+                            // from other clients.
+                            // Maybe call this method on another thread.
+                            // Note that when this method is called, the RemoteEndpoint.Async
+                            // is still in the process of sending data, so there probably should
+                            // be another way to abort the Websocket connection.
+                            // Ideally, there should be some abort() method that cancels the
+                            // connection immediately...
                             session.close(cr);
                         } catch (IOException e) {
                             // Ignore
@@ -169,11 +180,7 @@ public class Client {
                 // Close the session.
                 session.close();
             }
-        } catch (IllegalStateException ex) {
-            // Trying to write to the client when the session has
-            // already been closed.
-            // Ignore
-        } catch (IOException ex) {
+        } catch (IllegalStateException|IOException ex) {
             // Trying to write to the client when the session has
             // already been closed.
             // Ignore
@@ -188,6 +195,21 @@ public class Client {
     private final SendHandler sendHandler = new SendHandler() {
         @Override
         public void onResult(SendResult result) {
+            if (!result.isOK()) {
+                // Message could not be sent. In this case, we don't
+                // set isSendingMessage to false because we must assume the connection
+                // broke (and onClose will be called), so we don't try to send
+                // other messages.
+                // As a precaution, we close the session (e.g. if a send timeout occured).
+                // TODO: session.close() blocks, while this handler shouldn't block.
+                // Ideally, there should be some abort() method that cancels the
+                // connection immediately...
+                try {
+                    session.close();
+                } catch (IOException ex) {
+                    // Ignore
+                }
+            }
             synchronized (messagesToSend) {
 
                 if (!messagesToSend.isEmpty()) {
