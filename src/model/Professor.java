@@ -34,10 +34,39 @@ public class Professor {
 	public void setGrauEscolaridade(Integer grauEscolaridade) {
 		GrauEscolaridade = grauEscolaridade;
 	}
+	public String getEmail() {
+		return Email;
+	}
+	public void setEmail(String email) {
+		Email = email;
+	}
+	public Materia getMateria() {
+		return materia;
+	}
+	public void setMateria(Materia materia) {
+		this.materia = materia;
+	}
+	public String getSexo() {
+		return Sexo;
+	}
+	public void setSexo(String sexo) {
+		Sexo = sexo;
+	}
+	public String getTelefone() {
+		return Telefone;
+	}
+	public void setTelefone(String telefone) {
+		Telefone = telefone;
+	}
+	
 	private Integer CodProfessor;
 	private String Nome;
 	private Date DataNascimento;
 	private Date DataAdmissao;
 	private Integer GrauEscolaridade;
+	private String Email;
+	private String Sexo;
+	private String Telefone;
+	private Materia materia;
 	
 }
