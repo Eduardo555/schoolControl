@@ -12,7 +12,7 @@ import model.Aluno;
 
 public class AlunoBd {
 	
-	private Connection connection = null;
+	private Connection connection = new Conexao().getConexao();
 	
 	public void AlunoDb() {
 		Conexao conn = new Conexao();
@@ -26,8 +26,9 @@ public class AlunoBd {
 		
 		connection = conn.getConexao();
 		
-		String sql = "insert into Alunos (nome_aluno,data_nascimento,sexo,cor,data_matricula) values('"+aluno.getNome().toString()+
-					 "','"+aluno.getDataNascimento().toString()+"',"+aluno.getSexo()+","+aluno.getCor()+","+aluno.getDataMatricula()+")";
+		String sql = "insert into Alunos (nome_aluno,data_nascimento,sexo,cor,data_matricula,status,desligamento,data_desligamento) values('"+aluno.getNome().toString()+
+					 "','"+aluno.getDataNascimento().toString()+"','"+aluno.getSexo()+"','"+aluno.getCor()+"','"+aluno.getDataMatricula()+"',"+
+					 "'"+aluno.getStatus()+"','"+aluno.getDesligamento()+"','"+aluno.getDataDesligamento()+"')";
 		try {
 		java.sql.PreparedStatement statement = connection.prepareStatement(sql);
 		statement.execute(sql);
@@ -38,7 +39,7 @@ public class AlunoBd {
 		
 	}
 	
-	private ArrayList<Aluno> buscaAlunos() throws SQLException{
+	public ArrayList<Aluno> buscaAlunos() throws SQLException{
 		String sql = "select * from Alunos";		
 		ArrayList<Aluno> lista_alunos = new ArrayList<Aluno>();
 		Aluno aluno = new Aluno();
@@ -48,6 +49,12 @@ public class AlunoBd {
 		while(rs.next()) {
 			aluno.setNome(rs.getString("nome_aluno"));
 			aluno.setDataNascimento(rs.getString("data_nascimento"));
+			aluno.setSexo(rs.getString("sexo"));
+			aluno.setCor(rs.getString("cor"));
+			aluno.setDataMatricula(rs.getString("data_matricula"));
+			aluno.setStatus(rs.getString("status"));
+			aluno.setDesligamento(rs.getString("desligamento"));
+			aluno.setDataDesligamento(rs.getString("data_desligamento"));
 			lista_alunos.add(aluno);
 		}
 		
