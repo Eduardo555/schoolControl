@@ -16,22 +16,22 @@ public class Professor {
 	public void setNome(String nome) {
 		Nome = nome;
 	}
-	public Date getDataNascimento() {
+	public String getDataNascimento() {
 		return DataNascimento;
 	}
-	public void setDataNascimento(Date dataNascimento) {
+	public void setDataNascimento(String dataNascimento) {
 		DataNascimento = dataNascimento;
 	}
-	public Date getDataAdmissao() {
+	public String getDataAdmissao() {
 		return DataAdmissao;
 	}
-	public void setDataAdmissao(Date dataAdmissao) {
+	public void setDataAdmissao(String dataAdmissao) {
 		DataAdmissao = dataAdmissao;
 	}
-	public Integer getGrauEscolaridade() {
+	public String getGrauEscolaridade() {
 		return GrauEscolaridade;
 	}
-	public void setGrauEscolaridade(Integer grauEscolaridade) {
+	public void setGrauEscolaridade(String grauEscolaridade) {
 		GrauEscolaridade = grauEscolaridade;
 	}
 	public String getEmail() {
@@ -61,9 +61,9 @@ public class Professor {
 	
 	private Integer CodProfessor;
 	private String Nome;
-	private Date DataNascimento;
-	private Date DataAdmissao;
-	private Integer GrauEscolaridade;
+	private String DataNascimento;
+	private String DataAdmissao;
+	private String GrauEscolaridade;
 	private String Email;
 	private String Sexo;
 	private String Telefone;

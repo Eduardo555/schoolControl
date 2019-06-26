@@ -1,5 +1,7 @@
 package model;
 
+import java.util.ArrayList;
+
 public class Materia {
 	
 	public Integer getCodMateria() {
@@ -23,5 +25,6 @@ public class Materia {
 	private Integer CodMateria;
 	private String Nome;
 	private String Descricao;
+	private ArrayList<Materia> materiaList;
 	
 }
