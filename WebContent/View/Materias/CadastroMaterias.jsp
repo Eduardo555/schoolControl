@@ -28,7 +28,7 @@
             </div>
         </div>
 		
-		<form action="SalvarMaterias" method="post">
+		<form action="../../SalvarMaterias" method="post">
 		
 		<div class="content">
 			<div class="row">
@@ -57,7 +57,7 @@
 							<div class="row">
 								<div class="col-sm-12">
 		                        	<div class="form-group">
-										<label for="company" class=" form-control-label">Nome</label>
+										<label for="company" class=" form-control-label">Descrição</label>
 										<textarea rows="5" cols="5" name="TxtDescricao" id="TxtDescricao" placeholder="0" class="form-control" ></textarea>	
 									</div>
 								</div>
