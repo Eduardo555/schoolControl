@@ -10,7 +10,8 @@ import model.Aluno;
 
 public class Conexao {
 
-	private String host = "192.168.99.100";
+	//private String host = "192.168.99.100";
+	private String host = "localhost";
 	private String banco = "SchoolControl";
 	private String usuario = "root";
 	private String senha = "password";
@@ -30,7 +31,7 @@ public class Conexao {
 		if(connection != null) {
 			System.out.println("Conectado!");
 		} else {
-			System.out.println("Erro ao realizar conexão!");
+			System.out.println("Erro ao realizar conexï¿½o!");
 		}
 		
 		return connection;
