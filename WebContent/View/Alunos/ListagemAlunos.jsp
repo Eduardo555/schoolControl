@@ -14,6 +14,9 @@
                             </div>
                         </div>
                     </div>
+                    <form action="../../SalvarAlunos" method="get">
+                    <input type="submit" class="btn btn-success btn-sm" value="SALVAR" />
+                    </form>
                     <div class="col-sm-8">
                         <div class="page-header float-right">
                             <div class="page-title">

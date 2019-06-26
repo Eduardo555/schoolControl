@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServlet;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -39,6 +40,16 @@ public class AlunosServlet extends HttpServlet{
 			AtualizarAluno();
 		}
 		
+	}
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		ArrayList<Aluno> alunos = new ArrayList<Aluno>();
+		AlunoBd bd = new AlunoBd();
+		try {
+			alunos = bd.buscaAlunos();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	private void MontarAluno(HttpServletRequest req) {
