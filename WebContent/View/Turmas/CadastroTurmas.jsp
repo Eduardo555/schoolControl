@@ -41,14 +41,8 @@
                             </div>
                         
                         <div class="card-footer">
-                            <button type="submit" class="btn btn-success btn-sm">
-                                <i class="fa fa-dot-circle-o"></i> SALVAR
-                            </button>
-                            <button type="reset" class="btn btn-danger btn-sm">
-                                <i class="fa fa-ban"></i> EXCLUIR
-                            </button>
-                            
-                            
+                            <input type="submit" class="btn btn-success btn-sm" value="SALVAR" />
+                            <input type="submit" class="btn btn-danger btn-sm" value="EXCLUIR" />
                         </div>
                     </div>
                 </div>

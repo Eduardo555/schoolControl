@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="mt" tagdir="/WEB-INF/tags" %>
-<mt:simpletemplate title="Listagem de Professores">
+<mt:simpletemplate title="Listagem de Materias">
 	<jsp:attribute name="content">
 		
 		<div class="breadcrumbs">
@@ -10,7 +10,7 @@
                     <div class="col-sm-4">
                         <div class="page-header float-left">
                             <div class="page-title">
-                                <h1>Listagem de Professores</h1>
+                                <h1>Listagem de Matérias</h1>
                             </div>
                         </div>
                     </div>
@@ -18,7 +18,7 @@
                         <div class="page-header float-right">
                             <div class="page-title">
                                 <ol class="breadcrumb text-right">
-                                    <li><a href="#">Professores</a></li>
+                                    <li><a href="#">Matérias</a></li>
                                     <li class="active">Listagem</li>
                                 </ol>
                             </div>
