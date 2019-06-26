@@ -1,22 +1,15 @@
 package model;
 
-import java.util.ArrayList;
-
 public class Turma {
 
-	public ArrayList<Aluno> getAlunos() {
-		return Alunos;
-	}
-	public void setAlunos(ArrayList<Aluno> alunos) {
-		Alunos = alunos;
-	}
+
 	public Integer getCodTurma() {
 		return CodTurma;
 	}
 	public void setCodTurma(Integer codTurma) {
 		CodTurma = codTurma;
 	}
-	public ArrayList<Materia> getMateria() {
+	/*public ArrayList<Materia> getMateria() {
 		return materia;
 	}
 	public void setMateria(ArrayList<Materia> materia) {
@@ -27,11 +20,33 @@ public class Turma {
 	}
 	public void setProfessores(ArrayList<Professor> professores) {
 		this.professores = professores;
-	}
+	}*/
 	
+	
+	public Integer getCodAluno() {
+		return CodAluno;
+	}
+	public void setCodAluno(Integer codAluno) {
+		CodAluno = codAluno;
+	}
+	public Integer getCodProfessor() {
+		return CodProfessor;
+	}
+	public void setCodProfessor(Integer codProfessor) {
+		CodProfessor = codProfessor;
+	}
+	public Integer getCodMateria() {
+		return CodMateria;
+	}
+	public void setCodMateria(Integer codMateria) {
+		CodMateria = codMateria;
+	}
 	private Integer CodTurma;
-	private ArrayList<Aluno> Alunos;
+	private Integer CodAluno;
+	private Integer CodProfessor;
+	private Integer CodMateria;
+	/*private ArrayList<Aluno> Alunos;
 	private ArrayList<Professor> professores;
-	private ArrayList<Materia> materia;
+	private ArrayList<Materia> materia;*/
 	
 }

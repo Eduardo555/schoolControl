@@ -41,6 +41,9 @@
                             </div>
                         
                         <div class="card-footer">
+                        <form action="../../Turmas" method="post">
+                    	<input type="submit" class="btn btn-success btn-sm" value="SALVA" />
+                    	</form>
                             <input type="submit" class="btn btn-success btn-sm" value="SALVAR" />
                             <input type="submit" class="btn btn-danger btn-sm" value="EXCLUIR" />
                         </div>

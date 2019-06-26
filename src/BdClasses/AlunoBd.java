@@ -33,6 +33,7 @@ public class AlunoBd {
 		java.sql.PreparedStatement statement = connection.prepareStatement(sql);
 		statement.execute(sql);
 		System.out.println("certo");
+		conn.fechaConexao();
 		}catch(Exception ex) {
 			System.out.println("Deu ruim: "+ex);
 		}
@@ -57,6 +58,7 @@ public class AlunoBd {
 			aluno.setDataDesligamento(rs.getString("data_desligamento"));
 			lista_alunos.add(aluno);
 		}
+
 		
 		return lista_alunos;
 	}
